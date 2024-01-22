@@ -1,43 +1,31 @@
-# Home_Sales
-Big Data analysis of home sales data
+# Home_Sales SparkSQL Analytics Project
 
+## Project Overview
+This project is a comprehensive exercise in utilizing Apache SparkSQL for advanced data analysis. The focus is on extracting insights from a home sales dataset, emphasizing data manipulation, query optimization, and performance benchmarking in a Spark environment. This challenge serves as a demonstration of proficiency in handling big data analytics using SparkSQL.
 
-### Background
+## Initial Setup
+- **Repository Initialization**: Create a repository named `Home_Sales` on GitHub. This repository should be standalone and not linked to any existing projects.
+- **Local Repository Setup**: Clone the `Home_Sales` repository to your local machine to begin development.
+- **Version Control**: Ensure consistent commits and pushes to GitHub to maintain a history of changes and developments.
 
-In this challenge, you'll use your knowledge of SparkSQL to determine key metrics about home sales data. Then you'll use Spark to create temporary views, partition the data, cache and uncache a temporary table, and verify that the table has been uncached.
+## Required Files
+- **Module 22 Challenge Files**: Download and utilize these files as a starting point for the project.
 
-### Instructions
-
-1. Import the necessary PySpark SQL functions for this assignment.
-
-2. Read the home_sales_revised.csv data in the starter code into a Spark DataFrame.
-
-3. Create a temporary table called home_sales.
-
-4. Answer the following questions using SparkSQL:
-
-5. What is the average price for a four-bedroom house sold for each year? Round off your answer to two decimal places.
-
-6. What is the average price of a home for each year it was built that has three bedrooms and three bathrooms? Round off your answer to two decimal places.
-
-7. What is the average price of a home for each year that has three bedrooms, three bathrooms, two floors, and is greater than or equal to 2,000 square feet? Round off your answer to two decimal places.
-
-8. What is the "view" rating for homes costing more than or equal to $350,000? Determine the run time for this query, and round off your answer to two decimal places.
-
-9. Cache your temporary table home_sales.
-
-10. Check if your temporary table is cached.
-
-11. Using the cached data, run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
-
-12. Partition by the "date_built" field on the formatted parquet home sales data.
-
-13. Create a temporary table for the parquet data.
-
-14. Run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
-
-15. Uncache the home_sales temporary table.
-
-16. Verify that the home_sales temporary table is uncached using PySpark.
-
-17. Download your Home_Sales.ipynb file and upload it into your "Home_Sales" GitHub repository.
+## Project Instructions
+1. **File Preparation**: Rename `Home_Sales_starter_code.ipynb` to `Home_Sales.ipynb`.
+2. **Import Libraries**: Ensure all necessary PySpark SQL libraries are imported for the analysis.
+3. **Data Loading**: Load the `home_sales_revised.csv` file into a Spark DataFrame.
+4. **Temporary Table Creation**: Construct a temporary table named `home_sales` for data manipulation.
+5. **Data Analysis Tasks**: Using SparkSQL, perform the following analysis tasks with results rounded to two decimal places:
+   - Compute the average selling price of four-bedroom houses per year.
+   - Determine the average selling price of homes with three bedrooms and three bathrooms, segmented by year of construction.
+   - Analyze the average selling price for homes matching specific criteria (three bedrooms, three bathrooms, two floors, and a minimum of 2,000 square feet) by construction year.
+   - Assess the "view" rating for homes priced at or above $350,000, including the query's runtime performance.
+6. **Caching Strategy**: Implement caching for the `home_sales` temporary table.
+7. **Cache Verification**: Confirm the successful caching of the table.
+8. **Performance Analysis**: Execute and compare the runtime of the view rating query on both cached and uncached data.
+9. **Data Partitioning**: Apply data partitioning by the "date_built" field and format the data in parquet.
+10. **Parquet Temporary Table**: Establish a temporary table for the parquet-formatted data.
+11. **Query Execution on Parquet Data**: Perform the view rating query on the parquet data, noting runtime and comparing it with previous executions.
+12. **Table Uncaching**: Remove the `home_sales` table from cache.
+13. **Cache Status Verification**: Ensure the `home_sales` table is successfully uncached.
